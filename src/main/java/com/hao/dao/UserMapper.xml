@@ -6,8 +6,8 @@
 <mapper namespace="com.hao.dao.UserMapper">
     <!--添加用户-->
     <insert id="addUser" parameterType="Users">
-      insert into trade.users(account,password,name,gender,idCard,idCardFrontFile,idCardBackFile,userPhoneNum,mail,post,kind,companyName,comRegisterArea,comPostalCode,comPhoneNum,fax,legalPersonName,legalIDCard,legalIDCardFrontFile,legalIDCardBackFile,legalPhoneNum,companyProfile,bankAccount,bankName,USCC,USCCFile,OIBC,OIBCFile,TRC,TRCFile,businessLicense,businessLicenseFile,registerFund,status)
-      values (#{account}, #{password}, #{name},#{gender},#{idCard},#{idCardFrontFile},#{idCardBackFile},#{userPhoneNum},#{mail},#{post},#{kind},#{companyName},#{comRegisterArea},#{comPostalCode},#{comPhoneNum},#{fax},#{legalPersonName},#{legalIDCard},#{legalIDCardFrontFile},#{legalIDCardBackFile},#{legalPhoneNum},#{companyProfile},#{bankAccount},#{bankName},#{USCC},#{USCCFile},#{OIBC},#{OIBCFile},#{TRC},#{TRCFile},#{businessLicense},#{businessLicenseFile},#{registerFund},#{status})
+      insert into trade.users(account,password,name,gender,idCard,idCardFrontFile,idCardBackFile,userPhoneNum,mail,post)
+      values (#{account}, #{password}, #{name},#{gender},#{idCard},#{idCardFrontFile},#{idCardBackFile},#{userPhoneNum},#{mail},#{post})
    </insert>
 
     <insert id="addUser_User" parameterType="Users">
