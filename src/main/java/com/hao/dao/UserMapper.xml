@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hao.dao.UserMapper">
+    <!--添加用户-->
+    <insert id="addUser" parameterType="Users">
+      insert into trade.users(account,password,name,gender,idCard,idCardFrontFile,idCardBackFile,userPhoneNum,mail,post,kind,companyName,comRegisterArea,comPostalCode,comPhoneNum,fax,legalPersonName,legalIDCard,legalIDCardFrontFile,legalIDCardBackFile,legalPhoneNum,companyProfile,bankAccount,bankName,USCC,USCCFile,OIBC,OIBCFile,TRC,TRCFile,businessLicense,businessLicenseFile,registerFund,status)
+      values (#{account}, #{password}, #{name},#{gender},#{idCard},#{idCardFrontFile},#{idCardBackFile},#{userPhoneNum},#{mail},#{post},#{kind},#{companyName},#{comRegisterArea},#{comPostalCode},#{comPhoneNum},#{fax},#{legalPersonName},#{legalIDCard},#{legalIDCardFrontFile},#{legalIDCardBackFile},#{legalPhoneNum},#{companyProfile},#{bankAccount},#{bankName},#{USCC},#{USCCFile},#{OIBC},#{OIBCFile},#{TRC},#{TRCFile},#{businessLicense},#{businessLicenseFile},#{registerFund},#{status})
+   </insert>
+
+    <insert id="addUser_User" parameterType="Users">
+        insert into trade.users(account,password,name,gender,idCard,idCardFrontFile,idCardBackFile,userPhoneNum,mail,post)
+        values (#{account}, #{password}, #{name},#{gender},#{idCard},#{idCardFrontFile},#{idCardBackFile},#{userPhoneNum},#{mail},#{post})
+    </insert>
+
+    <insert id="addUser_Cmp" parameterType="Users">
+        update trade.users
+        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund}
+        where account = #{account}
+    </insert>
+    <!--更新用户信息-->
+    <update id="updateUser" parameterType="Users">
+      update trade.users
+      set password = #{password},name = #{name},gender = #{gender},idCard = #{idCard},idCardFrontFile = #{idCardFrontFile},idCardBackFile = #{idCardBackFile},userPhoneNum = #{userPhoneNum},mail = #{mail},post = #{post},kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund},status = #{status}
+      where account = #{account}
+   </update>
+
+    <update id="updateStatus" parameterType="Users">
+        update trade.users
+        set status=1
+        where account=#{account}
+    </update>
+
+    <select id="queryUserByAct" resultType="Users">
+        select * from trade.users where account = #{account}
+    </select>
+
+    <select id="queryAllUser" resultType="Users">
+        select * from trade.users
+    </select>
+
+    <select id="queryAllTrueUser" resultType="Users">
+        select * from trade.users where status=1;
+    </select>
+
+    <select id="queryAllFalseUser" resultType="Users">
+        select * from trade.users where status=-1 or status=0;
+    </select>
+</mapper>

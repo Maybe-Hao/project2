@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hao.dao.MessageMapper">
+    <insert id="addMessage" parameterType="Message">
+        insert into trade.account_message(account,message,constructDate)
+        values (#{account}, #{message}, #{constructDate})
+    </insert>
+    <update id="UpdateMessage" parameterType="Message">
+        update trade.account_message
+        set message = #{message},constructDate = #{constructDate}
+        where account = #{account}
+    </update>
+
+</mapper>
