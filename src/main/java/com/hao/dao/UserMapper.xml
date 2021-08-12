@@ -17,7 +17,7 @@
 
     <insert id="addUser_Cmp" parameterType="Users">
         update trade.users
-        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund}
+        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund},status=0
         where account = #{account}
     </insert>
     <!--更新用户信息-->
