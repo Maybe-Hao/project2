@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 public class Mytest {
     @Test
     public void test(){
@@ -16,12 +18,11 @@ public class Mytest {
 //        for(Books books:bookServiceImpl.queryAllBook()){
 //            System.out.println(books);
 //        }
-        Message m=new Message();
-        m.setAccount("123");
-        m.setMessage("我要改变的凹！");
-        m.setConstructDate("2021-8-21");
-        MessageService messageService= (MessageService) context.getBean("messageServiceImpl");
-        messageService.UpdateMessage(m);
+        AuditorService auditorService= (AuditorService) context.getBean("auditorServiceImpl");
+        List<Auditor> l=auditorService.queryAuditorByAAccount("123");
+        for (Auditor auditor:l){
+            System.out.println(auditor);
+        }
         System.out.println("success");
     }
 }

@@ -6,8 +6,8 @@
 <mapper namespace="com.hao.dao.UserMapper">
     <!--添加用户-->
     <insert id="addUser" parameterType="Users">
-      insert into trade.users(account,password,name,gender,idCard,idCardFrontFile,idCardBackFile,userPhoneNum,mail,post,kind,companyName,comRegisterArea,comPostalCode,comPhoneNum,fax,legalPersonName,legalIDCard,legalIDCardFrontFile,legalIDCardBackFile,legalPhoneNum,companyProfile,bankAccount,bankName,USCC,USCCFile,OIBC,OIBCFile,TRC,TRCFile,businessLicense,businessLicenseFile,registerFund,status)
-      values (#{account}, #{password}, #{name},#{gender},#{idCard},#{idCardFrontFile},#{idCardBackFile},#{userPhoneNum},#{mail},#{post},#{kind},#{companyName},#{comRegisterArea},#{comPostalCode},#{comPhoneNum},#{fax},#{legalPersonName},#{legalIDCard},#{legalIDCardFrontFile},#{legalIDCardBackFile},#{legalPhoneNum},#{companyProfile},#{bankAccount},#{bankName},#{USCC},#{USCCFile},#{OIBC},#{OIBCFile},#{TRC},#{TRCFile},#{businessLicense},#{businessLicenseFile},#{registerFund},#{status})
+      insert into trade.users(account,password,name,gender,idCard,idCardFrontFile,idCardBackFile,userPhoneNum,mail,post)
+      values (#{account}, #{password}, #{name},#{gender},#{idCard},#{idCardFrontFile},#{idCardBackFile},#{userPhoneNum},#{mail},#{post})
    </insert>
 
     <insert id="addUser_User" parameterType="Users">
@@ -17,7 +17,7 @@
 
     <insert id="addUser_Cmp" parameterType="Users">
         update trade.users
-        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund}
+        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund},status=0
         where account = #{account}
     </insert>
     <!--更新用户信息-->

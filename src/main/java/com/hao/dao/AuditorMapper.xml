@@ -8,4 +8,8 @@
     <insert id="addAuditor" parameterType="Auditor">
         insert into trade.register_auditor(auditorAccount,userAccount,constructDate) values (#{auditorAccount},#{userAccount},#{constructDate})
     </insert>
+
+    <select id="queryAuditorByAAccount" resultType="Auditor">
+        select* from register_auditor where status=0 and auditorAccount=#{auditorAccount}
+    </select>
 </mapper>
