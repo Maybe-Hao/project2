@@ -2,6 +2,7 @@ package com.hao.service;
 
 import com.hao.dao.UserMapper;
 import com.hao.pojo.Users;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -45,8 +46,8 @@ public class UserServiceImpl implements UserService{
         return userMapper.addUser_Cmp(users);
     }
 
-    public int updateStatus(Users users) {
-        return userMapper.updateStatus(users);
+    public int updateStatus(@Param("account") String account) {
+        return userMapper.updateStatus(account);
     }
 
 }

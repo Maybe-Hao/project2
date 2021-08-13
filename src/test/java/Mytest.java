@@ -18,9 +18,8 @@ public class Mytest {
 //        for(Books books:bookServiceImpl.queryAllBook()){
 //            System.out.println(books);
 //        }
-        MessageService auditorService= (MessageService) context.getBean("messageServiceImpl");
-        for(Message m:auditorService.queryMessageByAct("123"))
-            System.out.println(m);
+        UserService auditorService= (UserService) context.getBean("userServiceImpl");
+        auditorService.updateStatus("33");
         System.out.println("success");
     }
 }
