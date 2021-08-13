@@ -4,6 +4,8 @@ import com.hao.dao.MessageMapper;
 import com.hao.pojo.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 public class MessageServiceImpl implements MessageService{
     @Autowired
     private MessageMapper messageMapper;
@@ -18,5 +20,9 @@ public class MessageServiceImpl implements MessageService{
     //添加信息
     public int addMessage(Message message) {
         return messageMapper.addMessage(message);
+    }
+
+    public List<Message> queryAllMessage() {
+        return messageMapper.queryAllMessage();
     }
 }

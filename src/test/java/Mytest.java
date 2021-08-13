@@ -18,9 +18,9 @@ public class Mytest {
 //        for(Books books:bookServiceImpl.queryAllBook()){
 //            System.out.println(books);
 //        }
-        AuditorService auditorService= (AuditorService) context.getBean("auditorServiceImpl");
-        List<Auditor> l=auditorService.queryAuditorByAAccount("123");
-        for (Auditor auditor:l){
+        MessageService auditorService= (MessageService) context.getBean("messageServiceImpl");
+        List<Message> l=auditorService.queryAllMessage();
+        for (Message auditor:l){
             System.out.println(auditor);
         }
         System.out.println("success");

@@ -14,4 +14,8 @@
         where account = #{account}
     </update>
 
+    <select id="queryAllMessage" resultType="Message">
+        select * from trade.account_message
+    </select>
+
 </mapper>
