@@ -19,10 +19,7 @@ public class Mytest {
 //            System.out.println(books);
 //        }
         MessageService auditorService= (MessageService) context.getBean("messageServiceImpl");
-        List<Message> l=auditorService.queryAllMessage();
-        for (Message auditor:l){
-            System.out.println(auditor);
-        }
+        System.out.println(auditorService.queryMessageByAct("11"));
         System.out.println("success");
     }
 }

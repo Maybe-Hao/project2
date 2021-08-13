@@ -1,6 +1,8 @@
 package com.hao.service;
 
 import com.hao.pojo.Message;
+import com.hao.pojo.Users;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,4 +13,6 @@ public interface MessageService {
     int addMessage(Message message);
     //查询所有的信息
     List<Message> queryAllMessage();
+    //查询指定信息
+    Message queryMessageByAct(@Param("account") String account);
 }

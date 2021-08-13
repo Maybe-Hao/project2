@@ -2,6 +2,7 @@ package com.hao.service;
 
 import com.hao.dao.MessageMapper;
 import com.hao.pojo.Message;
+import com.hao.pojo.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -24,5 +25,9 @@ public class MessageServiceImpl implements MessageService{
 
     public List<Message> queryAllMessage() {
         return messageMapper.queryAllMessage();
+    }
+
+    public Message queryMessageByAct(String account) {
+        return messageMapper.queryMessageByAct(account);
     }
 }
