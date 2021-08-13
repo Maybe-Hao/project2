@@ -27,7 +27,7 @@
       where account = #{account}
    </update>
 
-    <update id="updateStatus" parameterType="String">
+    <update id="updateStatus">
         update trade.users
         set status=#{status}
         where account=#{account}

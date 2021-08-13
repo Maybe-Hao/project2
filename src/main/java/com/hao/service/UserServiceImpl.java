@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService{
         return userMapper.addUser_Cmp(users);
     }
 
-    public int updateStatus(String account, String status) {
+    public int updateStatus(String account, int status) {
         return userMapper.updateStatus(account,status);
     }
 
