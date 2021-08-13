@@ -27,7 +27,7 @@ public class MessageServiceImpl implements MessageService{
         return messageMapper.queryAllMessage();
     }
 
-    public Message queryMessageByAct(String account) {
+    public List<Message> queryMessageByAct(String account) {
         return messageMapper.queryMessageByAct(account);
     }
 }

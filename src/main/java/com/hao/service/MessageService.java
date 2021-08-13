@@ -14,5 +14,5 @@ public interface MessageService {
     //查询所有的信息
     List<Message> queryAllMessage();
     //查询指定信息
-    Message queryMessageByAct(@Param("account") String account);
+    List<Message> queryMessageByAct(@Param("account") String account);
 }
