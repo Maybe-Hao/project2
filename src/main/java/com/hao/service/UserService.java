@@ -24,5 +24,5 @@ public interface UserService {
     //插入用户信息第二部分
     int addUser_Cmp(Users users);
     //审核通过，让status为1
-    int updateStatus(@Param("account") String account);
+    int updateStatus(@Param("account") String account,@Param("status")String status);;
 }

@@ -27,6 +27,6 @@ public interface UserMapper {
     //插入用户信息第二部分
     int addUser_Cmp(Users users);
     //审核通过，让status为1
-    int updateStatus(@Param("account") String account);
+    int updateStatus(@Param("account") String account,@Param("status")String status);
     //用户注册公司信息后，将信息注入管理员的数据库，通知管理员
 }

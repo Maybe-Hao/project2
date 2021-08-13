@@ -19,7 +19,7 @@ public class Mytest {
 //            System.out.println(books);
 //        }
         UserService auditorService= (UserService) context.getBean("userServiceImpl");
-        auditorService.updateStatus("33");
+        auditorService.updateStatus("22","0");
         System.out.println("success");
     }
 }

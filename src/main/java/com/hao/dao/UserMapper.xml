@@ -29,7 +29,7 @@
 
     <update id="updateStatus" parameterType="String">
         update trade.users
-        set status=1
+        set status=#{status}
         where account=#{account}
     </update>
 
