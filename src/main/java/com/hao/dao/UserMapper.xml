@@ -17,13 +17,13 @@
 
     <insert id="addUser_Cmp" parameterType="Users">
         update trade.users
-        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund},status=0
+        set kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},status=0
         where account = #{account}
     </insert>
     <!--更新用户信息-->
     <update id="updateUser" parameterType="Users">
       update trade.users
-      set password = #{password},name = #{name},gender = #{gender},idCard = #{idCard},userPhoneNum = #{userPhoneNum},mail = #{mail},post = #{post},kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},legalPhoneNum = #{legalPhoneNum},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},OIBC = #{OIBC},OIBCFile = #{OIBCFile},TRC = #{TRC},TRCFile = #{TRCFile},businessLicense = #{businessLicense},businessLicenseFile = #{businessLicenseFile},registerFund = #{registerFund},status = #{status}
+      set password = #{password},name = #{name},gender = #{gender},idCard = #{idCard},userPhoneNum = #{userPhoneNum},mail = #{mail},post = #{post},kind = #{kind},companyName = #{companyName},comRegisterArea = #{comRegisterArea},comPostalCode = #{comPostalCode},comPhoneNum = #{comPhoneNum},fax = #{fax},legalPersonName = #{legalPersonName},legalIDCard = #{legalIDCard},legalIDCardFrontFile = #{legalIDCardFrontFile},legalIDCardBackFile = #{legalIDCardBackFile},companyProfile = #{companyProfile},bankAccount = #{bankAccount},bankName = #{bankName},USCC = #{USCC},USCCFile = #{USCCFile},status = #{status}
       where account = #{account}
    </update>
 

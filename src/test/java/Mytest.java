@@ -19,7 +19,18 @@ public class Mytest {
 //            System.out.println(books);
 //        }
         UserService auditorService= (UserService) context.getBean("userServiceImpl");
-        auditorService.updateStatus("112",0);
+        Users user=new Users();
+        user.setAccount("233");
+        user.setPassword("123");
+        user.setName("233");
+        user.setGender("1");
+        user.setIdCard("123");
+        user.setIdCardFrontFile("233");
+        user.setIdCardBackFile("233");
+        user.setMail("233");
+        user.setPost("233");
+        user.setUserPhoneNum("233");
+        auditorService.addUser_User(user);
         System.out.println("success");
     }
 }
