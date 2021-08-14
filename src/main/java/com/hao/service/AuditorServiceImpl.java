@@ -21,4 +21,8 @@ public class AuditorServiceImpl implements AuditorService{
     public List<Auditor> queryAuditorByAAccount(String auditorAccount) {
         return auditorMapper.queryAuditorByAAccount(auditorAccount);
     }
+
+    public int deleteAuditorByAAccount(String auditorAccount, String userAccount) {
+        return auditorMapper.deleteAuditorByAAccount(auditorAccount,userAccount);
+    }
 }

@@ -12,4 +12,8 @@
     <select id="queryAuditorByAAccount" resultType="Auditor">
         select* from register_auditor where status=0 and auditorAccount=#{auditorAccount}
     </select>
+
+    <delete id="deleteAuditorByAAccount" parameterType="String">
+        delete from trade.register_auditor where auditorAccount=#{auditorAccount} and userAccount=#{userAccount}
+    </delete>
 </mapper>
