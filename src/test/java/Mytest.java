@@ -18,7 +18,17 @@ public class Mytest {
 //        for(Books books:bookServiceImpl.queryAllBook()){
 //            System.out.println(books);
 //        }
-        AuditorService auditorService= (AuditorService) context.getBean("auditorServiceImpl");
-        auditorService.deleteAuditorByAAccount("123","112");
+        UserService auditorService= (UserService) context.getBean("userServiceImpl");
+        Users u=new Users();
+        u.setAccount("1111");
+        u.setPassword("123");
+        u.setUserPhoneNum("123");
+        u.setName("3333333");
+        u.setGender("1");
+        u.setIdCard("123");
+        u.setUserPhoneNum("123");
+        u.setMail("123");
+        u.setPost("123");
+        auditorService.addUser_User(u);
     }
 }

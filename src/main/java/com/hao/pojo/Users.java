@@ -35,7 +35,7 @@ public class Users {
     private String businessLicense;
     private String businessLicenseFile;
     private String registerFund;
-    private String status;
+    private int status;
 
     @Override
     public String toString() {
@@ -341,11 +341,11 @@ public class Users {
         this.registerFund = registerFund;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }
